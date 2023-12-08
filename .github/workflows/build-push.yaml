@@ -20,7 +20,7 @@ jobs:
           if [ "${DOCKER_REPO}" != "" ]; then
             echo "DOCKER_REPO=${DOCKER_REPO}" >> $GITHUB_OUTPUT
           else
-            echo "DOCKER_REPO=cr1cr1/${{ github.repository }}" >> $GITHUB_OUTPUT
+            echo "DOCKER_REPO=${{ github.repository }}" >> $GITHUB_OUTPUT
           fi
         env:
           DOCKER_REPO: "${{ secrets.DOCKER_REPO }}"
