@@ -1,6 +1,7 @@
 # Ubiquiti UniFi Network Server container image
 
-<https://github.com/cr1cr1/ubiquiti-unifi-server>
+- Source repo: <https://github.com/cr1cr1/ubiquiti-unifi-server>
+- Docker image repo: <https://hub.docker.com/r/cr1cr1/ubiquiti-unifi-server>
 
 ## Description
 
