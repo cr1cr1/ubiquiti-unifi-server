@@ -14,7 +14,7 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* UniFi.unix.zip
 
-ADD entrypoint.sh /UniFi/entrypoint.sh
+ADD --chmod=755 entrypoint.sh /UniFi/entrypoint.sh
 ADD logback.xml /UniFi/logback.xml
 
 ## https://help.ui.com/hc/en-us/articles/218506997-UniFi-Network-Required-Ports-Reference
