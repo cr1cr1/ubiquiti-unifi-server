@@ -18,7 +18,7 @@ ADD --chmod=755 entrypoint.sh /UniFi/entrypoint.sh
 ADD logback.xml /UniFi/logback.xml
 
 ## https://help.ui.com/hc/en-us/articles/218506997-UniFi-Network-Required-Ports-Reference
-EXPOSE 8080 8443 3478/udp 1900/udp 10001/udp 5514/udp
+EXPOSE 8080 8443 3478/udp 1900/udp 10001/udp 5656-5699/udp 5514/udp
 
 WORKDIR /UniFi
 
