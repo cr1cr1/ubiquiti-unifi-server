@@ -19,7 +19,6 @@ docker run \
     -p 8443:8443 \
     -p 10001:10001/udp \
     -p 1900:1900/udp \
-    -p 5656-5699:5656-5699/udp \
     -v "$CONTAINER_NAME-data:/UniFi/data" \
     docker.io/cr1cr1/ubiquiti-unifi-server:latest
 ```
