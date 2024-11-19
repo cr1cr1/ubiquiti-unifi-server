@@ -1,6 +1,6 @@
 FROM debian:11-slim
 
-ARG UNIFI_VERSION=8.2.93 \
+ARG UNIFI_VERSION=8.6.9 \
   MONGODB_VERSION=4.4
 
 RUN apt-get update \
