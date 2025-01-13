@@ -1,3 +1,6 @@
 #!/bin/env bash
 
-docker build -t "${PWD##*/}" .
+TAG=${PWD##*/}
+
+docker build -t "$TAG" .
+docker image ls "$TAG"

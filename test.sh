@@ -9,13 +9,13 @@ trap 'docker rm -f $CONTAINER' EXIT
 CONTAINER=$(docker run \
     -d \
     --name "$CONTAINER_NAME" \
-    -p 8080:8080 \
+    -p 18080:8080 \
     "$CONTAINER_NAME"
 )
 
 ## Check if the application is up
 check() {
-    curl -sS http://localhost:8080/status | grep -oEq '"rc":"ok"' && echo " SUCCESS!"
+    curl -sS http://localhost:18080/status | grep -oEq '"rc":"ok"' && echo " SUCCESS!"
 }
 
 ## Wait for the application to be up

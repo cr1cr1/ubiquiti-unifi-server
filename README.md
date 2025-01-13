@@ -1,11 +1,11 @@
-# Ubiquiti UniFi Network Server container image
+# Ubiquiti UniFi Network Application container image
 
 - Source repo: <https://github.com/cr1cr1/ubiquiti-unifi-server>
 - Docker image repo: <https://hub.docker.com/r/cr1cr1/ubiquiti-unifi-server>
 
 ## Description
 
-This container image is based on the official [Debian 11](https://hub.docker.com/_/debian/tags/?page=1&name=11-slim) image and provides the [UniFi Network Server](https://www.ui.com/software/) software.
+This container image is based on the official [Debian 12](https://hub.docker.com/_/debian/tags/?page=1&name=12-slim) image and provides the [UniFi Network Application](https://ui.com/download/unifi) software.
 
 ## Usage
 
