@@ -5,7 +5,7 @@
 
 ## Description
 
-This container image is based on the official [Debian 12](https://hub.docker.com/_/debian/tags/?page=1&name=12-slim) image and provides the [UniFi Network Application](https://ui.com/download/unifi) software.
+This container image is based on the official [Debian 11](https://hub.docker.com/_/debian/tags/?page=1&name=11-slim) image and provides the [UniFi Network Application](https://ui.com/download/unifi) software.
 
 ## Usage
 
