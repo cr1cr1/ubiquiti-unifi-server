@@ -9,7 +9,9 @@ This container image is based on the official [Debian 12](https://hub.docker.com
 
 > [!WARNING]
 >
-> Coming from versions before 9.5.21-1, you must export the settings before upgrading, as Mongo was bumped from 4 to 8. The upgrade will not migrate the database, so rename `data/db` before starting the new container and import the settings after.
+> Coming from versions before 9.5.21-1, you must export the settings before upgrading, as Mongo was bumped from 4 to 8. The upgrade will not migrate the database, so rename `data/db` before starting the new container and import the settings after. Alternatively, use mongodb tools to dump and restore the database.
+>
+> Starting with this new version will not work on older synology and other x86 CPUs not supporting AVX2 instructions.
 
 ## Usage
 
