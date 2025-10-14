@@ -1,12 +1,12 @@
-FROM debian:11-slim
+FROM debian:13-slim
 
-ARG UNIFI_VERSION=9.3.43 \
-  MONGODB_VERSION=4.4
+ARG UNIFI_VERSION=9.5.21 \
+  MONGODB_VERSION=8.2
 
 RUN apt-get update \
-  && apt-get install --no-install-recommends -y curl unzip gnupg systemctl openjdk-17-jdk \
-  && curl -fsSL https://pgp.mongodb.com/server-${MONGODB_VERSION}.asc | gpg -o /usr/share/keyrings/mongodb-server-${MONGODB_VERSION}.gpg --dearmor \
-  && echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-${MONGODB_VERSION}.gpg ] http://repo.mongodb.org/apt/debian buster/mongodb-org/${MONGODB_VERSION} main" | tee /etc/apt/sources.list.d/mongodb-org-${MONGODB_VERSION}.list \
+  && apt-get install --no-install-recommends -y curl unzip gnupg systemctl openjdk-21-jdk \
+  && curl -fsSL https://pgp.mongodb.com/server-${MONGODB_VERSION%.*}.0.asc | gpg -o /usr/share/keyrings/mongodb-server-${MONGODB_VERSION}.gpg --dearmor \
+  && echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-${MONGODB_VERSION}.gpg ] http://repo.mongodb.org/apt/debian bookworm/mongodb-org/${MONGODB_VERSION} main" | tee /etc/apt/sources.list.d/mongodb-org-${MONGODB_VERSION}.list \
   && apt-get update \
   && apt-get install --no-install-recommends -y mongodb-org-server \
   && curl -sSLO https://dl.ui.com/unifi/${UNIFI_VERSION}/UniFi.unix.zip \
