@@ -5,11 +5,11 @@
 
 ## Description
 
-This container image is based on the official [Debian 13](https://hub.docker.com/_/debian/tags/?page=1&name=13-slim) image and provides the [UniFi Network Application](https://ui.com/download/unifi) software.
+This container image is based on the official [Debian 12](https://hub.docker.com/_/debian/tags/?page=1&name=12-slim) image and provides the [UniFi Network Application](https://ui.com/download/unifi) software.
 
 > [!WARNING]
 >
-> Coming versions before 9.5.21-1, you must export the settings before upgrading, as Mongo was bumped from 4 to 8. The upgrade will not migrate the database.
+> Coming from versions before 9.5.21-1, you must export the settings before upgrading, as Mongo was bumped from 4 to 8. The upgrade will not migrate the database, so rename `data/db` before starting the new container and import the settings after.
 
 ## Usage
 
