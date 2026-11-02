@@ -1,10 +1,10 @@
-FROM debian:12-slim
+FROM debian:13-slim
 
-ARG UNIFI_VERSION=10.1.85 \
+ARG UNIFI_VERSION=10.6.109 \
   MONGODB_VERSION=8.2
 
 RUN apt-get update \
-  && apt-get install --no-install-recommends -y curl unzip gnupg systemctl openjdk-17-jdk \
+  && apt-get install --no-install-recommends -y curl unzip gnupg systemctl openjdk-25-jdk \
   && curl -fsSL https://pgp.mongodb.com/server-${MONGODB_VERSION%.*}.0.asc | gpg -o /usr/share/keyrings/mongodb-server-${MONGODB_VERSION}.gpg --dearmor \
   && echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-${MONGODB_VERSION}.gpg ] http://repo.mongodb.org/apt/debian bookworm/mongodb-org/${MONGODB_VERSION} main" | tee /etc/apt/sources.list.d/mongodb-org-${MONGODB_VERSION}.list \
   && apt-get update \
